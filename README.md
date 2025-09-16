@@ -85,7 +85,7 @@ In the following list, we reference the source code of each group.
 
 ## Statistical Analysis
 
-We conducted our analysis in **R**, calculating correlations and regression models between dependent and independent variables.
+We conducted our analysis in **R**, and outline the analysis scripts and data sets as follows.
 
 * Script: [`analysis/data_analysis.R`](analysis/data_analysis.R)
 * Data: [`analysis/data.csv`](analysis/data.csv) and [`analysis/demographics.csv`](analysis/demographics.csv)
