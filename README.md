@@ -94,14 +94,16 @@ We conducted our analysis in **R**, calculating correlations and regression mode
 
 1. Open R (or RStudio) in the `analysis/` directory.
 2. (Recommended) Use `renv` to restore package versions:
+
    ```r
    install.packages("renv")
    ```
 3. Run:
+
    ```r
    source("data_analysis.R")
    ```
-4. Outputs will be written to `analysis/output/`.
+5. Outputs will be written to `analysis/output/`.
 
 ---
 
