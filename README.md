@@ -29,7 +29,7 @@ We targeted **five touchpoints** along a typical authentication journey where us
 For each touchpoint, we compared a **control** condition against **three nudge conditions**. Figure 1 summarizes the experimental design across conditions.
 
 <p align="center">
-  <img src=" image/nudges-design.jpg" alt=" Overview of five touchpoints with one control and three nudge variants each" width=" 65%">
+  <img src="image/nudges-design.jpg" alt=" Overview of five touchpoints with one control and three nudge variants each" width=" 65%">
 </p>
 
 **Figure 1.** Overview of the five touchpoints and the four conditions (1x control, 3x nudges) per touchpoint.
