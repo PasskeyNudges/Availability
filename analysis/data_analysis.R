@@ -41,7 +41,7 @@ exp_tab <- agg_df %>%
 rownames(exp_tab) <- agg_df$touchpoint
 chisq.test(exp_tab)
 
-# Set wd, load the data
+
 df <- read.csv("data.csv")
 
 
@@ -178,3 +178,37 @@ coef_success <- coef_success[complete.cases(coef_success), ]
 printCoefmat(coef_success, signif.stars = TRUE)
 
 citation()
+
+# ----------------------------
+# Calculate OR
+# ----------------------------
+
+
+extract_or_only <- function(model) {
+  coefs <- summary(model)$coefficients
+  coefs <- coefs[complete.cases(coefs), ]
+  
+  OR <- exp(coefs[, "Estimate"])
+  
+  out <- data.frame(
+    Predictor = rownames(coefs),
+    B = coefs[, "Estimate"],
+    SE = coefs[, "Std. Error"],
+    z = coefs[, "z value"],
+    p = coefs[, "Pr(>|z|)"],
+    OR = OR,
+    row.names = NULL
+  )
+  
+  return(out)
+}
+
+### Apply to all three models
+or_adoption    <- extract_or_only(glm_adoption)
+or_interaction <- extract_or_only(glm_interaction)
+or_success     <- extract_or_only(glm_success)
+
+### Print results
+or_adoption
+or_interaction
+or_success
